@@ -56,9 +56,11 @@ Next,we are going to test our model on our windows10 system
 ```
 python DetectOnCamera/detect.py
 ```
-If all things going successfully,this code could detect whether the person wears the mask but the accuracy is relatively low owing to my little datasets.
+If all things going successfully,this code could detect whether the person wears the mask but the accuracy is relatively low owing to my little datasets.  
+
 ![Mask](https://github.com/chenkang455/TFLite-Model-transfer/blob/main/images/Mask.png?raw=true)
 ![NoMask](https://github.com/chenkang455/TFLite-Model-transfer/blob/main/images/NoMask.png?raw=true)
+
 ## Common issues
 This is the input format and the output format on tflite:
 ```
