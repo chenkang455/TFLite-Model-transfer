@@ -1,6 +1,6 @@
-#Convert TF Object Detection Model  To TFLite 
+# Convert TF Object Detection Model  To TFLite 
 There are two steps to convert TF Model to TFlite.  
-##Step1: Export TFLite Inference Graph
+## Step1: Export TFLite Inference Graph
 This step generates a SavedModel which can be converted to TFLite using TFLite Converter.
 
 Run this command and replace the pipeline_config_path,checkpoint_dir and your export directory.   
@@ -42,7 +42,7 @@ Model:
     pipeline.config
 ```
 
-##Step2: Convert to TFLite
+## Step2: Convert to TFLite
 Using ConvertToTFlite.py and configure your saved model path and the export path or you can use the command line ,but the official strongly recommend the former mode.
 ```
 python Conversion\ConvertToTFlite.py 
@@ -50,15 +50,15 @@ python Conversion\ConvertToTFlite.py
 For the command line usage the official reference is very  detailed over there.
 https://www.tensorflow.org/lite/convert
 
-##Step3:Employ TFLite model
+## Step3:Employ TFLite model
 Having converted our model to model.tflite,we can employ it in some embedded devices like raspberry pi or android.(Remember to copy your TFlite model to the DetectOnCamera folder)   
 Next,we are going to test our model on our windows10 system
 ```
 python DetectOnCamera/detect.py
 ```
 If all things going successfully,this code could detect whether the person wears the mask but the accuracy is relatively low owing to my little datasets.
-![Mask](images\Mask.png)
-![NoMask](images\NoMask.png)
+![Mask](https://github.com/chenkang455/TFLite-Model-transfer/blob/main/images/Mask.png?raw=true)
+![NoMask](https://github.com/chenkang455/TFLite-Model-transfer/blob/main/images/NoMask.png?raw=true)
 ##Common issues
 This is the input format and the output format on tflite:
 ```
